@@ -11,7 +11,7 @@ import time
 app = Flask(__name__)
 CORS(app)
 
-BOT_TOKEN = "8657131857:AAGc51bX3yetk9bb63ozglRs-wku7l3Ac0U"  # <-- שים כאן את הטוקן שלך
+BOT_TOKEN = os.environ.get("BOT_TOKEN")  # <-- שים כאן את הטוקן שלך
 TELEGRAM_API = f"https://api.telegram.org/bot{BOT_TOKEN}"
 
 # קובץ לשמירת התזכורות (בסביבת production השתמש ב-DB)
